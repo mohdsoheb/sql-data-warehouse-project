@@ -7,8 +7,21 @@ Script Purpose:
     already exist. Run this script to re-define the structure of the
     'bronze' tables.
 
+    This script defines the DDL structure for all six Bronze tables.
+
+WARNING:
+    Existing Bronze tables will be dropped and recreated.
+    All data stored in these tables will be permanently deleted.
+
+Prerequisites:
+    - Database: datawarehouse
+    - Schema: bronze (already created)
+
+Usage:
+    Execute this script while connected to the datawarehouse database.
 ===============================================================================
 */
+
 
 -- CRM: customer information
 DROP TABLE IF EXISTS bronze.crm_cust_info;
